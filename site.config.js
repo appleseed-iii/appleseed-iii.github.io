@@ -8,7 +8,7 @@ export default {
 
   // basic site info (required)
   name: 'Applebee\'s',
-  domain: 'appleseed-iii-github-io.vercel.app/',
+  domain: 'appleseed-iii-github-io.vercel.app',
   author: 'Appleseed',
 
   // open graph metadata (optional)
