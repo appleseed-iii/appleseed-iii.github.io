@@ -7,9 +7,9 @@ export default {
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Applebee\'s',
+  name: 'Appleseed',
   domain: 'appleseed-iii.github.io',
-  author: 'Appleseed',
+  author: 'Applebees',
 
   // open graph metadata (optional)
   description: 'Appleseed',
