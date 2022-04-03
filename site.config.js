@@ -4,7 +4,7 @@ export default {
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
-  rootNotionSpaceId: 'f9c7af81-6e49-4c57-86de-3d908a5a111e',
+  rootNotionSpaceId: null,
 
   // basic site info (required)
   name: 'Applebee\'s',
