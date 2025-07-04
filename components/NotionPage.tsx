@@ -12,6 +12,7 @@ import {
   NotionRenderer,
   useNotionContext
 } from 'react-notion-x'
+import { Collection } from "react-notion-x/build/third-party/collection"
 import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet'
 import { useSearchParam } from 'react-use'
 
@@ -106,11 +107,11 @@ const Code = dynamic(() =>
   })
 )
 
-const Collection = dynamic(() =>
-  import('react-notion-x/build/third-party/collection').then(
-    (m) => m.Collection
-  )
-)
+// const Collection = dynamic(() =>
+//   import('react-notion-x/build/third-party/collection').then(
+//     (m) => m.Collection
+//   )
+// )
 const Equation = dynamic(() =>
   import('react-notion-x/build/third-party/equation').then((m) => m.Equation)
 )
@@ -130,6 +131,12 @@ const Modal = dynamic(
     ssr: false
   }
 )
+
+function MyCollection(props) {
+  return (
+    <Collection {...props} className="aaaa" />
+  )
+}
 
 function Tweet({ id }: { id: string }) {
   const { recordMap } = useNotionContext()
@@ -197,7 +204,7 @@ export function NotionPage({
       nextLegacyImage: Image,
       nextLink: Link,
       Code,
-      Collection,
+      Collection: MyCollection,
       Equation,
       Pdf,
       Modal,
@@ -209,6 +216,7 @@ export function NotionPage({
     }),
     []
   )
+
 
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
@@ -327,7 +335,7 @@ export function NotionPage({
         footer={footer}
       />
 
-      <GitHubShareButton />
+      {/* <GitHubShareButton /> */}
     </>
   )
 }
